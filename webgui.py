@@ -100,7 +100,7 @@ class DashboardApp:
             -webkit-backdrop-filter: blur(20px);
         '''
 
-        with ui.row().classes('w-full px-6 py-4 items-center justify-between').style(header_style):
+        with ui.row().style('width: 144%; height: 80px; padding: 20px;').classes('w-full px-6 py-4 items-center justify-between').style(header_style):
             # Navigation items
             with ui.row().classes('space-x-6'):
                 for item in self.nav_items:
@@ -124,7 +124,7 @@ class DashboardApp:
     def create_main_content(self):
         is_dark = self.current_theme == 'dark'
         
-        with ui.column().classes('p-8 flex-1 bg-gray-50' if not is_dark else 'p-8 flex-1 bg-gray-900'):
+        with ui.column().style('width: 144%; height: 80px; padding: 20px;').classes('p-8 flex-1 bg-gray-50' if not is_dark else 'p-8 flex-1 bg-gray-900'):
             # Welcome section
             with ui.row().classes('items-center justify-between mb-8'):
                 with ui.column():
